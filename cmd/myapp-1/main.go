@@ -14,10 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// Package version provides a place to store version information, which can be
-// set at build time.
-package version
+// Package main is the entrypoint for myapp-1.
+package main
 
-// Version is the app-global version string, which should be substituted with a
-// real value during build.
-var Version = "UNKNOWN"
+import (
+	"log"
+
+	"github.com/thockin/go-build-template/pkg/version"
+)
+
+func main() {
+	log.Printf("version: %s\n", version.Version)
+}
